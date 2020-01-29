@@ -1,0 +1,11 @@
+Database Entities:
+
+	Location- student can view/prof has full access
+	Reaction (numerical value)- both have full access
+	Semester student can view/prof has full access
+	Professor- student can view/ prof has full access
+	Type of Land- both have full acess
+	Student name/ID- student can only view or insert/ prof has full access
+	Electrical Output (most vital) both has full access
+	Campus- student can view only their prof/ prof has full access
+	Class ID-student can view/prof has full access
