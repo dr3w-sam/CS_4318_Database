@@ -1,0 +1,11 @@
+Abstract
+
+The proposed database will allow for a logical and concise storage 
+of data collected from the Gen III MicroPlate Biolog lab being conducted at 
+Lone Star College-Montgomery. This database application will allow students and professors
+the ability to query through large amounts of data collected, draw inferences from the data to
+extend hypothesis, and further the research in the field of microbiology 
+pertaining to this specific lab. The platform is a MySQL database with 
+the application GUI written in VB using Windows Forms App(.NET Framework).
+The result is a database which enables students and professors to enter, manage, 
+and query data through a user-friendly interface.
