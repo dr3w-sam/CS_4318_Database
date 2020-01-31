@@ -1,0 +1,33 @@
+Mission Objectives
+
+To maintain (enter, update, and delete) data on Student_id
+To maintain (enter, update, and delete) data on Location
+To maintain (enter, update, and delete) data on Semester
+To maintain (enter, update, and delete) data on Type of Land
+To maintain (enter, update, and delete) data on Electrical Output
+To maintain (enter, update, and delete) data on Campus
+To maintain (enter, update, and delete) data on Class ID
+To maintain (enter, updatem and delete) data on Reaction
+To maintain (enter and update) data on Professor
+
+To perform searches on Location
+To perform searches on Electrical Output
+To perform searches on Campus
+To perform searches on Reaction
+To perform searches on Semester
+To perform searches on Type of Land
+To perform searches on Student_id
+To perform searches on Class ID
+
+To track status of Electrical Output
+To track status of Reaction
+
+To report on Student_id
+To report on Class ID
+To report on Reactions
+To report on Location
+To report on Type of Land
+To report on Semester
+To report on Campus
+To report on Electrical Output
+                                                                                                   
