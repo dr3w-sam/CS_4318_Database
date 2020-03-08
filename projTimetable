@@ -3,7 +3,8 @@ Project timetable
 Task 1: Finalize needed tables and attributes
 	As a democratic team, all members will review the tables and attributes found within the database to make certain that there aren't any entities or attributes being overlooked. 
 
-Task 2: Write code using SQL for the database
-	The team will meet 
-Task 3: Implement database within an application
+Task 2: Write code using MySQL for the database
+	The team will meet each week, at least once weekly, to write the code for the database from March 17, 2020 through April 7, 2020. For this task, Andrew Samuel will take lead and assign tasks to the other members of the team until the database is fully coded.
 
+Task 3: Implement database within an application
+	The team will work together for the design and implementation of the database within an application. As this project is beign designed for delivery to another university that uses Microsoft exclusively, this application will be written in VB for ease of installation and use on the machines that are currently being used by the university. For this task, Jacquelyn Johnson will take the lead, assign tasks to the other members of the team, and call meetings as needed until the database is fully implemented. This task should be completed by April 21, 2020, leaving a week to make any necessary changes to visual presentation and application logic answsering the question: does the layout make sense to an end user.
