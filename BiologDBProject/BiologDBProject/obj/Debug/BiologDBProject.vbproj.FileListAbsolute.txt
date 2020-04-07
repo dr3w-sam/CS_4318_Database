@@ -1,0 +1,14 @@
+C:\Users\18322\Desktop\databaseBiolog\CS_4318_Database\BiologDBProject\BiologDBProject\bin\Debug\BiologDBProject.exe.config
+C:\Users\18322\Desktop\databaseBiolog\CS_4318_Database\BiologDBProject\BiologDBProject\bin\Debug\BiologDBProject.exe
+C:\Users\18322\Desktop\databaseBiolog\CS_4318_Database\BiologDBProject\BiologDBProject\bin\Debug\BiologDBProject.pdb
+C:\Users\18322\Desktop\databaseBiolog\CS_4318_Database\BiologDBProject\BiologDBProject\bin\Debug\BiologDBProject.xml
+C:\Users\18322\Desktop\databaseBiolog\CS_4318_Database\BiologDBProject\BiologDBProject\obj\Debug\BiologDBProject.vbprojAssemblyReference.cache
+C:\Users\18322\Desktop\databaseBiolog\CS_4318_Database\BiologDBProject\BiologDBProject\obj\Debug\BiologDBProject.LoginForm.resources
+C:\Users\18322\Desktop\databaseBiolog\CS_4318_Database\BiologDBProject\BiologDBProject\obj\Debug\BiologDBProject.Resources.resources
+C:\Users\18322\Desktop\databaseBiolog\CS_4318_Database\BiologDBProject\BiologDBProject\obj\Debug\BiologDBProject.studentAction.resources
+C:\Users\18322\Desktop\databaseBiolog\CS_4318_Database\BiologDBProject\BiologDBProject\obj\Debug\BiologDBProject.vbproj.GenerateResource.cache
+C:\Users\18322\Desktop\databaseBiolog\CS_4318_Database\BiologDBProject\BiologDBProject\obj\Debug\BiologDBProject.vbproj.CoreCompileInputs.cache
+C:\Users\18322\Desktop\databaseBiolog\CS_4318_Database\BiologDBProject\BiologDBProject\obj\Debug\BiologDBProject.exe
+C:\Users\18322\Desktop\databaseBiolog\CS_4318_Database\BiologDBProject\BiologDBProject\obj\Debug\BiologDBProject.xml
+C:\Users\18322\Desktop\databaseBiolog\CS_4318_Database\BiologDBProject\BiologDBProject\obj\Debug\BiologDBProject.pdb
+C:\Users\18322\Desktop\databaseBiolog\CS_4318_Database\BiologDBProject\BiologDBProject\obj\Debug\BiologDBProject.profAction.resources
