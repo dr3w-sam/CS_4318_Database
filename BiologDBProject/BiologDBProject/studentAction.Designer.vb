@@ -30,6 +30,9 @@ Partial Class studentAction
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.ttpNewData = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ttpModData = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ttpViewData = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ttpQuery = New System.Windows.Forms.ToolTip(Me.components)
         Me.SuspendLayout()
         '
         'btnNewData
@@ -53,6 +56,7 @@ Partial Class studentAction
         Me.btnModifyData.Size = New System.Drawing.Size(135, 30)
         Me.btnModifyData.TabIndex = 1
         Me.btnModifyData.Text = "&Modify Lab Data"
+        Me.ttpModData.SetToolTip(Me.btnModifyData, "Click to modify data of previous lab entry")
         Me.btnModifyData.UseVisualStyleBackColor = True
         '
         'btnViewData
@@ -64,6 +68,7 @@ Partial Class studentAction
         Me.btnViewData.Size = New System.Drawing.Size(123, 30)
         Me.btnViewData.TabIndex = 2
         Me.btnViewData.Text = "&View Lab Data"
+        Me.ttpViewData.SetToolTip(Me.btnViewData, "Shows all lab data entries")
         Me.btnViewData.UseVisualStyleBackColor = True
         '
         'btnQueryData
@@ -75,6 +80,7 @@ Partial Class studentAction
         Me.btnQueryData.Size = New System.Drawing.Size(103, 30)
         Me.btnQueryData.TabIndex = 3
         Me.btnQueryData.Text = "&Query Data"
+        Me.ttpQuery.SetToolTip(Me.btnQueryData, "Search data for patterns")
         Me.btnQueryData.UseVisualStyleBackColor = True
         '
         'Label1
@@ -125,4 +131,7 @@ Partial Class studentAction
     Friend WithEvents Label1 As Label
     Friend WithEvents btnExit As Button
     Friend WithEvents ttpNewData As ToolTip
+    Friend WithEvents ttpModData As ToolTip
+    Friend WithEvents ttpViewData As ToolTip
+    Friend WithEvents ttpQuery As ToolTip
 End Class
