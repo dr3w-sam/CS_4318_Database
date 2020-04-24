@@ -36,7 +36,6 @@ FOREIGN KEY (campus_ID) references Campus (campus_ID));
 CREATE TABLE Campus (
 campus_ID int NOT NULL AUTO_INCREMENT,
 university_ID int,
-term_ID varchar(15),
 campus_name varchar(10) NOT NULL,
 zipcode int NOT NULL,
 PRIMARY KEY (campus_ID),
@@ -48,15 +47,15 @@ city_ID varchar(10),
 university_name varchar(10) NOT NULL,
 city_name varchar(15) NOT NULL,
 state_name varchar(10) NOT NULL,
-zipcode int NOT NULL,
+zipcode int(10) NOT NULL,
 PRIMARY KEY (university_ID),
 FOREIGN KEY (city_ID) references City (city_ID));
 
 CREATE TABLE City (
 city_ID varchar(10) NOT NULL AUTO_INCREMENT,
 city_name varchar(15) NOT NULL,
-state_name varchar(10) NOT NULL,
-zipcode int NOT NULL,
+state_name varchar(15) NOT NULL,
+zipcode int(10) NOT NULL,
 PRIMARY KEY (city_ID));
 
 CREATE TABLE Location (
@@ -66,7 +65,7 @@ location_name varchar(25) NOT NULL,
 soil_type varchar(15) NOT NULL,
 city_name varchar(15) NOT NULL,
 state_name varchar(10) NOT NULL,
-zipcode int NOT NULL,
+zipcode int(10) NOT NULL,
 PRIMARY KEY (location_ID),
 FOREIGN KEY (campus_ID) references Campus (campus_ID));
 
