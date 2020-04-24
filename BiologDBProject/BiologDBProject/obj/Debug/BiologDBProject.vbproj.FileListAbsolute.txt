@@ -12,3 +12,4 @@ C:\Users\18322\Desktop\databaseBiolog\CS_4318_Database\BiologDBProject\BiologDBP
 C:\Users\18322\Desktop\databaseBiolog\CS_4318_Database\BiologDBProject\BiologDBProject\obj\Debug\BiologDBProject.xml
 C:\Users\18322\Desktop\databaseBiolog\CS_4318_Database\BiologDBProject\BiologDBProject\obj\Debug\BiologDBProject.pdb
 C:\Users\18322\Desktop\databaseBiolog\CS_4318_Database\BiologDBProject\BiologDBProject\obj\Debug\BiologDBProject.profAction.resources
+C:\Users\18322\Desktop\databaseBiolog\CS_4318_Database\BiologDBProject\BiologDBProject\obj\Debug\BiologDBProject.newUser.resources
