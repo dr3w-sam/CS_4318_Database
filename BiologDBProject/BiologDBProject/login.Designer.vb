@@ -31,6 +31,7 @@ Partial Class LoginForm
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
+        Me.btnNewUser = New System.Windows.Forms.Button()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -95,7 +96,7 @@ Partial Class LoginForm
         '
         Me.btnLogin.AutoSize = True
         Me.btnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogin.Location = New System.Drawing.Point(97, 241)
+        Me.btnLogin.Location = New System.Drawing.Point(162, 228)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(75, 30)
         Me.btnLogin.TabIndex = 5
@@ -106,12 +107,23 @@ Partial Class LoginForm
         '
         Me.btnExit.AutoSize = True
         Me.btnExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExit.Location = New System.Drawing.Point(222, 241)
+        Me.btnExit.Location = New System.Drawing.Point(222, 281)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(75, 30)
         Me.btnExit.TabIndex = 6
         Me.btnExit.Text = "E&xit"
         Me.btnExit.UseVisualStyleBackColor = True
+        '
+        'btnNewUser
+        '
+        Me.btnNewUser.AutoSize = True
+        Me.btnNewUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNewUser.Location = New System.Drawing.Point(82, 281)
+        Me.btnNewUser.Name = "btnNewUser"
+        Me.btnNewUser.Size = New System.Drawing.Size(88, 30)
+        Me.btnNewUser.TabIndex = 7
+        Me.btnNewUser.Text = "&New User"
+        Me.btnNewUser.UseVisualStyleBackColor = True
         '
         'LoginForm
         '
@@ -121,6 +133,7 @@ Partial Class LoginForm
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(421, 336)
+        Me.Controls.Add(Me.btnNewUser)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.txtPassword)
@@ -130,7 +143,7 @@ Partial Class LoginForm
         Me.Controls.Add(Me.StatusStrip1)
         Me.Name = "LoginForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "BioLog Lab Data"
+        Me.Text = "BioLog Lab Data Collection"
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
@@ -146,4 +159,5 @@ Partial Class LoginForm
     Friend WithEvents txtPassword As TextBox
     Friend WithEvents btnLogin As Button
     Friend WithEvents btnExit As Button
+    Friend WithEvents btnNewUser As Button
 End Class

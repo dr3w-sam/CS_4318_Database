@@ -14,4 +14,9 @@
     Me.Hide()
 
   End Sub
+
+  Private Sub btnNewUser_Click(sender As Object, e As EventArgs) Handles btnNewUser.Click
+    'brings up a message box window that will collect the required information and send that information 
+    'the proper database table
+  End Sub
 End Class
