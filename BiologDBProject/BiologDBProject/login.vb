@@ -19,5 +19,6 @@
     'brings up a message box window that will collect the required information and send that information 
     'the proper database table
     newUser.Show()
+    Me.Hide()
   End Sub
 End Class
