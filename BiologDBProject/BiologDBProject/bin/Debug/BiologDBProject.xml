@@ -22,5 +22,230 @@ BiologDBProject
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="T:BiologDBProject.biologDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSet.campusDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSet.cityDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSet.classDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSet.dataDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSet.locationDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSet.professorDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSet.semesterDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSet.studentDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSet.universityDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSet.campusRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSet.cityRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSet.classRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSet.dataRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSet.locationRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSet.professorRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSet.semesterRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSet.studentRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSet.universityRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSet.campusRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSet.cityRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSet.classRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSet.dataRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSet.locationRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSet.professorRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSet.semesterRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSet.studentRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSet.universityRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSetTableAdapters.campusTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSetTableAdapters.cityTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSetTableAdapters.classTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSetTableAdapters.dataTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSetTableAdapters.locationTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSetTableAdapters.professorTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSetTableAdapters.semesterTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSetTableAdapters.studentTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSetTableAdapters.universityTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:BiologDBProject.biologDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(BiologDBProject.biologDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:BiologDBProject.biologDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(BiologDBProject.biologDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:BiologDBProject.biologDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(BiologDBProject.biologDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:BiologDBProject.biologDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:BiologDBProject.biologDataSetTableAdapters.TableAdapterManager.UpdateAll(BiologDBProject.biologDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:BiologDBProject.biologDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
 </members>
 </doc>

@@ -96,6 +96,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="biologDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>biologDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SqlStatements.vb" />
     <Compile Include="newUser.Designer.vb">
       <DependentUpon>newUser.vb</DependentUpon>
     </Compile>
@@ -158,6 +164,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="biologDataSet.xsc">
+      <DependentUpon>biologDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="biologDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>biologDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="biologDataSet.xss">
+      <DependentUpon>biologDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
