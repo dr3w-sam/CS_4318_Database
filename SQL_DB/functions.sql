@@ -4,6 +4,8 @@ SELECT * FROM University;
 
 SELECT * FROM Campus;
 
+SELECT * FROM Location;
+
 SELECT * FROM Semester;
 
 SELECT * FROM Class;
@@ -11,8 +13,6 @@ SELECT * FROM Class;
 SELECT * FROM Professor;
 
 SELECT * FROM Student;
-
-SELECT * FROM Location;
 
 SELECT * FROM Data_Yield;
 
@@ -25,6 +25,9 @@ FROM University WHERE (state_name = "Texas");
 SELECT count(campus_ID) AS "# of Campuses in System"
 FROM Campus WHERE (university_ID = 0001);
 
+SELECT count(location_ID) AS "Similar soil"
+FROM Location WHERE (soil_type = "Dry");
+
 SELECT count(term_ID) AS "NSemesters taken at Campus"
 FROM Semester WHERE (campus_ID = 1000);
 
@@ -36,9 +39,6 @@ FROM Professor WHERE (class_ID = 1100);
 
 SELECT count(student_ID) AS "# of Seniors"
 FROM Students WHERE (grade_level = "Senior");
-
-SELECT count(location_ID) AS "Similar soil"
-FROM Location WHERE (soil_type = "Dry");
 
 SELECT AVG(reaction) AS "Average Reaction Value"
 FROM Data_Yield;
