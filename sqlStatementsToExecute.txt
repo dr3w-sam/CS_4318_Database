@@ -16,7 +16,7 @@ SELECT * FROM test_biolog.student;
 
 SELECT * FROM test_biolog.data_yield;
 
---aggregate functions--	corrected //had to add '' in the aggregate call around the field name
+--aggregate functions--	corrected //had to add '' in the aggregate call around the field name for count
 SELECT count('university_ID') AS "# of Universities in City"
 FROM test_biolog.city;
 
