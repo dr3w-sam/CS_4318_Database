@@ -1,0 +1,79 @@
+SELECT * FROM test_biolog.city;
+
+SELECT * FROM test_biolog.university;
+
+SELECT * FROM test_biolog.campus;
+
+SELECT * FROM test_biolog.location;
+
+SELECT * FROM test_biolog.semester;
+
+SELECT * FROM test_biolog.class;
+
+SELECT * FROM test_biolog.professor;
+
+SELECT * FROM test_biolog.student;
+
+SELECT * FROM test_biolog.data_yield;
+
+--aggregate functions--	//needs testing//
+SELECT count(university_ID) AS "# of Universities in City"
+FROM test_biolog.city;
+
+SELECT count(*) AS "# of Universities in State"
+FROM test_biolog.university WHERE (state_name = "Texas");
+
+SELECT count(campus_ID) AS "# of Campuses in System"
+FROM test_biolog.campus WHERE (university_ID = 0001);
+
+SELECT count(location_ID) AS "Similar soil"
+FROM test_biolog.location WHERE (soil_type = "Dry");
+
+SELECT count(term_ID) AS "NSemesters taken at Campus"
+FROM test_biolog.semester WHERE (campus_ID = 1000);
+
+SELECT count(class_ID) AS "Classes in this semester"
+FROM test_biolog.class WHERE (term_ID = "12020");
+
+SELECT count(professor_ID) AS "Professors Teaching this Class"
+FROM test_biolog.professor WHERE (class_ID = 1100);
+
+SELECT count(student_ID) AS "# of Seniors"
+FROM test_biolog.students WHERE (grade_level = "Senior");
+
+SELECT AVG(reaction) AS "Average Reaction Value"
+FROM test_biolog.data_yield;
+
+--join statements--
+SELECT city_name.City, state_name.City, university_name.University, campus_name.Campus
+FROM City JOIN University ON City.city_ID = University.city_ID
+JOIN Campus ON University.university_ID = Campus.university_ID;
+
+SELECT campus_name.Campus, term_name.Semester, term_year.Semester, class_name.Class
+FROM Campus JOIN Semester ON Campus.campus_ID = Semester.campus_ID
+JOIN Class ON Semester.term_ID = Class.term_ID;
+
+SELECT term_name.Semester, term_year.Semester, class_ID.Class, last_name.Professor, class_name.Class, class_room.Class
+FROM Semester JOIN Class ON Semester.term_ID = Class.term_ID
+JOIN Professors ON Class.class_ID = Professor.class_ID;
+
+SELECT campus_name.Campus, location_name.Location, data_ID.Data_Yield, substrate.Data_Yield, reaction.Data_Yield, electrical_output.Data_Yield
+FROM Campus JOIN Location ON Campus.campus_ID = Location.campus_ID 
+JOIN Data_Yield ON Location.location_ID = Data_Yield.location_ID;
+
+--corrected--
+SELECT class.class_name, student.first_name, student.last_name, data_yield.data_ID, data_yield.substrate, data_yield.reaction, data_yield.electrical_output
+FROM class JOIN student ON class.class_ID = student.class_ID 
+JOIN  data_yield ON student.student_ID = data_yield.student_ID;
+
+SELECT city.city_name, city.state_name, university.university_name, campus.campus_name
+FROM city JOIN university ON city.city_ID = university.city_ID
+JOIN campus ON university.university_ID = campus.university_ID;
+
+SELECT campus.campus_name, semester.term_name, semester.term_year, class.class_name
+FROM campus JOIN semester ON campus.campus_ID = semester.campus_ID
+JOIN class ON semester.term_ID = class.term_ID;
+
+SELECT semester.term_name, semester.term_year, class.class_ID, professor.last_name, class.class_name, class.class_room
+FROM semester JOIN class ON semester.term_ID = class.term_ID
+JOIN professor ON class.class_ID = professor.class_ID;
