@@ -16,11 +16,11 @@ SELECT * FROM Student;
 
 SELECT * FROM Data_Yield;
 
-SELECT count(university_ID) AS "# of Universities in City"
+SELECT count(university_ID) AS "# of Universities in System"
 FROM City;
 
-SELECT count(*) AS "# of Universities in State"
-FROM University WHERE (state_name = "Texas");
+SELECT count(*) AS "# of Universities in City"
+FROM University WHERE (city_name = "Houston");
 
 SELECT count(campus_ID) AS "# of Campuses in System"
 FROM Campus WHERE (university_ID = 0001);
@@ -28,7 +28,7 @@ FROM Campus WHERE (university_ID = 0001);
 SELECT count(location_ID) AS "Similar soil"
 FROM Location WHERE (soil_type = "Dry");
 
-SELECT count(term_ID) AS "NSemesters taken at Campus"
+SELECT count(term_ID) AS "Semesters taken at Campus"
 FROM Semester WHERE (campus_ID = 1000);
 
 SELECT count(class_ID) AS "Classes in this semester"
