@@ -17,11 +17,11 @@ SELECT * FROM test_biolog.student;
 SELECT * FROM test_biolog.data_yield;
 
 --aggregate functions--	corrected //had to add '' in the aggregate call around the field name for count
-SELECT count('university_ID') AS "# of Universities in City"
+SELECT count('university_ID') AS "# of Universities in System"
 FROM test_biolog.city;
 
-SELECT count(*) AS "# of Universities in State"
-FROM test_biolog.university WHERE (state_name = "Texas");
+SELECT count(*) AS "# of Universities in City"
+FROM test_biolog.university WHERE (city_name = "Houston");
 
 SELECT count('campus_ID') AS "# of Campuses in System"
 FROM test_biolog.campus WHERE (university_ID = 0001);
