@@ -2,15 +2,6 @@
 Imports MySql.Data.MySqlClient
 
 Public Class newUser
-  'create local variables to collect information from the form
-  Private fName As String
-  Private lName As String
-  Private gLevel As String
-  Private studPassword As String
-  Private email As String
-  Private instID As Int16
-
-
   'create connection varibles for database stuff
   Dim mysqlConn As MySqlConnection
   Dim sql As MySqlCommand
@@ -25,6 +16,7 @@ Public Class newUser
   Private Sub popCbb()
     Dim query As String
     Dim dr As MySqlDataReader
+
     Try
       mysqlConn = New MySqlConnection("server=localhost;userid=root;password=Quantum_2020;database=biolog")
       query = "select classID, className from class"
@@ -38,59 +30,47 @@ Public Class newUser
         Dim both As String
         clId = CType(dr("classID"), String)
         name = CType(dr("className"), String)
-        both = "Course " + clId + " " + name
+        both = clId + " " + name
         cbbClassPicker.Items.Add(both)
       End While
 
     Catch ex As Exception
-
+      MessageBox.Show(ex.Message)
     Finally
       mysqlConn.Close()
     End Try
 
-
   End Sub
 
+  'sub to handle submit button click
   Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
+    'create local variables to collect information from the form
+    Dim fName As String
+    Dim lName As String
+    Dim gLevel As String
+    Dim studPassword As String
+    Dim email As String
+    Dim instID As Int16
     'collect information from the fields and send to the Student Table in the connected biolog database
-
     fName = txtStudFName.Text
     lName = txtStudLName.Text
     gLevel = CType(cbbGradeLevel.SelectedItem, String)
     studPassword = txtStudNewPass.Text
     email = txtStudEmail.Text
-    ' instID = CShort(SqlStatements.GetStudentValue("student", "institutionID"))
-    instID = 10001 + 1
-    MessageBox.Show(fName)
+    MessageBox.Show(fName + " line 60") 'here to make sure that text field capture is working properly
 
     mysqlConn = New MySqlConnection("server=localhost;userid=root;password=Quantum_2020;database=biolog")
-
-    'Try
-    '  Dim instID As Int16
-    '  Dim q As String
-    '  q = "SELECT institutionID FROM student WHERE studentID =(SELECT * FROM student ORDER BY studentID DESC LIMIT 1;) "
-    '  Dim check As New MySqlCommand(q, mysqlConn)
-    '  Dim idGrab As MySqlDataReader = check.ExecuteReader()
-
-    '  instID = CShort(idGrab.Read())
-
-    '  instID = CShort(instID + 1)
-    '  mysqlConn.Close()
-    'Catch ex As Exception
-    '  MessageBox.Show(ex.Message)
-
-    'End Try
-
 
     'try block to insert values in Student table of biolog database
     Try
 
       Dim query As String
       'define the sql statement that will be executed
-      query = "INSERT INTO `student`(`institutionID`, `firstName`, `lastName`, `gradeLevel`, `email`, `studentPassword`) VALUES (@instID, @fName, @lName, @gLevel, @email, @studPassword)"
+      query = "INSERT INTO `student`(`studentID`, `classID`, `firstName`, `lastName`, `gradeLevel`, `email`, `studentPassword`) VALUES (@studentID, @classID, @fName, @lName, @gLevel, @email, @studPassword)"
       Dim sql As New MySqlCommand(query, mysqlConn)
       'reader = sql.ExecuteReader
-      sql.Parameters.Add("@instID", MySqlDbType.Int16)
+      sql.Parameters.Add("@studentID", MySqlDbType.Int16).Value = txtStudID.Text
+      sql.Parameters.Add("@classID", MySqlDbType.String).Value = getClassID()
       sql.Parameters.Add("@fName", MySqlDbType.VarChar).Value = txtStudFName.Text
       sql.Parameters.Add("@lName", MySqlDbType.VarChar).Value = txtStudLName.Text
       sql.Parameters.Add("@glevel", MySqlDbType.VarChar).Value = cbbGradeLevel.SelectedItem
@@ -123,4 +103,14 @@ Public Class newUser
     Me.Close()
     LoginForm.Show()
   End Sub
+
+  'this function will return the classID number to pass to the database in order to assign the student to the correct class
+  Private Function getClassID() As String
+    Dim id As String
+    Dim actual As String
+    id = CType(cbbClassPicker.SelectedItem(), String)
+    actual = id.Substring(0, 4)
+
+    Return actual
+  End Function
 End Class
