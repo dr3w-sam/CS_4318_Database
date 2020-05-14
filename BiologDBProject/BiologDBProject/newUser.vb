@@ -10,9 +10,46 @@ Public Class newUser
   Private email As String
   Private instID As Int16
 
+
   'create connection varibles for database stuff
   Dim mysqlConn As MySqlConnection
   Dim sql As MySqlCommand
+
+  Private Sub NewUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    popCbb()
+
+  End Sub
+
+  'this sub will collect data from the class table in the database, stuff it in a dataset, and load it in a 
+  'combobox for selection in the form 
+  Private Sub popCbb()
+    Dim query As String
+    Dim dr As MySqlDataReader
+    Try
+      mysqlConn = New MySqlConnection("server=localhost;userid=root;password=Quantum_2020;database=biolog")
+      query = "select classID, className from class"
+
+      mysqlConn.Open()
+      sql = New MySqlCommand(query, mysqlConn)
+      dr = sql.ExecuteReader
+      While dr.Read = True
+        Dim clId As String
+        Dim name As String
+        Dim both As String
+        clId = CType(dr("classID"), String)
+        name = CType(dr("className"), String)
+        both = "Course " + clId + " " + name
+        cbbClassPicker.Items.Add(both)
+      End While
+
+    Catch ex As Exception
+
+    Finally
+      mysqlConn.Close()
+    End Try
+
+
+  End Sub
 
   Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
     'collect information from the fields and send to the Student Table in the connected biolog database
@@ -69,9 +106,6 @@ Public Class newUser
         MessageBox.Show("Data Saved in Student Table")
         mysqlConn.Close()
       End If
-
-
-
 
     Catch ex As Exception
       'show exception that is thrown

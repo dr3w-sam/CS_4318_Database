@@ -34,6 +34,8 @@ Partial Class newUser
         Me.txtStudLName = New System.Windows.Forms.TextBox()
         Me.txtStudEmail = New System.Windows.Forms.TextBox()
         Me.txtStudNewPass = New System.Windows.Forms.TextBox()
+        Me.lblClass = New System.Windows.Forms.Label()
+        Me.cbbClassPicker = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'lblFName
@@ -61,7 +63,7 @@ Partial Class newUser
         Me.cbbGradeLevel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbbGradeLevel.FormattingEnabled = True
         Me.cbbGradeLevel.Items.AddRange(New Object() {"Freshman", "Sophomore", "Junior", "Senior"})
-        Me.cbbGradeLevel.Location = New System.Drawing.Point(209, 82)
+        Me.cbbGradeLevel.Location = New System.Drawing.Point(209, 87)
         Me.cbbGradeLevel.Name = "cbbGradeLevel"
         Me.cbbGradeLevel.Size = New System.Drawing.Size(121, 24)
         Me.cbbGradeLevel.TabIndex = 2
@@ -90,7 +92,7 @@ Partial Class newUser
         '
         Me.lblStudPass.AutoSize = True
         Me.lblStudPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStudPass.Location = New System.Drawing.Point(12, 155)
+        Me.lblStudPass.Location = New System.Drawing.Point(12, 180)
         Me.lblStudPass.Name = "lblStudPass"
         Me.lblStudPass.Size = New System.Drawing.Size(74, 16)
         Me.lblStudPass.TabIndex = 5
@@ -143,10 +145,29 @@ Partial Class newUser
         'txtStudNewPass
         '
         Me.txtStudNewPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtStudNewPass.Location = New System.Drawing.Point(209, 149)
+        Me.txtStudNewPass.Location = New System.Drawing.Point(209, 171)
         Me.txtStudNewPass.Name = "txtStudNewPass"
         Me.txtStudNewPass.Size = New System.Drawing.Size(100, 22)
         Me.txtStudNewPass.TabIndex = 11
+        '
+        'lblClass
+        '
+        Me.lblClass.AutoSize = True
+        Me.lblClass.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblClass.Location = New System.Drawing.Point(12, 137)
+        Me.lblClass.Name = "lblClass"
+        Me.lblClass.Size = New System.Drawing.Size(48, 16)
+        Me.lblClass.TabIndex = 12
+        Me.lblClass.Text = "Class: "
+        '
+        'cbbClassPicker
+        '
+        Me.cbbClassPicker.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbbClassPicker.FormattingEnabled = True
+        Me.cbbClassPicker.Location = New System.Drawing.Point(209, 129)
+        Me.cbbClassPicker.Name = "cbbClassPicker"
+        Me.cbbClassPicker.Size = New System.Drawing.Size(121, 24)
+        Me.cbbClassPicker.TabIndex = 13
         '
         'newUser
         '
@@ -154,6 +175,8 @@ Partial Class newUser
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlDark
         Me.ClientSize = New System.Drawing.Size(402, 320)
+        Me.Controls.Add(Me.cbbClassPicker)
+        Me.Controls.Add(Me.lblClass)
         Me.Controls.Add(Me.txtStudNewPass)
         Me.Controls.Add(Me.txtStudEmail)
         Me.Controls.Add(Me.txtStudLName)
@@ -185,4 +208,6 @@ Partial Class newUser
     Friend WithEvents txtStudLName As TextBox
     Friend WithEvents txtStudEmail As TextBox
     Friend WithEvents txtStudNewPass As TextBox
+    Friend WithEvents lblClass As Label
+    Friend WithEvents cbbClassPicker As ComboBox
 End Class
