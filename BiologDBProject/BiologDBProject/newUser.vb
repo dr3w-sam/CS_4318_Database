@@ -2,10 +2,11 @@
 Imports MySql.Data.MySqlClient
 
 Public Class newUser
-  'create connection varibles for database stuff
+  'create connection varibles for database
   Dim mysqlConn As MySqlConnection
   Dim sql As MySqlCommand
 
+  'this method loads the combobox with the data pulled from the database for selection later
   Private Sub NewUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
     popCbb()
 
@@ -14,24 +15,24 @@ Public Class newUser
   'this sub will collect data from the class table in the database, stuff it in a dataset, and load it in a 
   'combobox for selection in the form 
   Private Sub popCbb()
-    Dim query As String
-    Dim dr As MySqlDataReader
+    Dim query As String       'var to use for sql command to be passed to the database
+    Dim dr As MySqlDataReader 'needed to read the data from the database into a local variable
 
     Try
       mysqlConn = New MySqlConnection("server=localhost;userid=root;password=Quantum_2020;database=biolog")
-      query = "select classID, className from class"
+      query = "select classID, className from class"  'selects only the classID and the className from the db
 
-      mysqlConn.Open()
-      sql = New MySqlCommand(query, mysqlConn)
+      mysqlConn.Open()        'open db connection
+      sql = New MySqlCommand(query, mysqlConn)  'pass mysql statement and open db connection
       dr = sql.ExecuteReader
-      While dr.Read = True
+      While dr.Read = True  'will loop until no more tuples are found in the db
         Dim clId As String
         Dim name As String
-        Dim both As String
+        Dim both As String  'variable to hold string concat
         clId = CType(dr("classID"), String)
         name = CType(dr("className"), String)
         both = clId + " " + name
-        cbbClassPicker.Items.Add(both)
+        cbbClassPicker.Items.Add(both)  'adds as concatenated string to the combobox for user selection
       End While
 
     Catch ex As Exception
