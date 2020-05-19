@@ -51,14 +51,14 @@ Public Class newUser
     Dim gLevel As String
     Dim studPassword As String
     Dim email As String
-    Dim instID As Int16
+
     'collect information from the fields and send to the Student Table in the connected biolog database
     fName = txtStudFName.Text
     lName = txtStudLName.Text
     gLevel = CType(cbbGradeLevel.SelectedItem, String)
     studPassword = txtStudNewPass.Text
     email = txtStudEmail.Text
-    MessageBox.Show(fName + " line 60") 'here to make sure that text field capture is working properly
+    'MessageBox.Show(fName + " line 60") 'here to make sure that text field capture is working properly
 
     mysqlConn = New MySqlConnection("server=localhost;userid=root;password=Quantum_2020;database=biolog")
 
