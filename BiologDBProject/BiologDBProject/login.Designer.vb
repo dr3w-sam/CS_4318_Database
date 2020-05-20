@@ -23,8 +23,6 @@ Partial Class LoginForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoginForm))
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.statusLabelMain = New System.Windows.Forms.ToolStripStatusLabel()
         Me.lblUserID = New System.Windows.Forms.Label()
         Me.txtUserID = New System.Windows.Forms.TextBox()
         Me.lblPassword = New System.Windows.Forms.Label()
@@ -32,23 +30,9 @@ Partial Class LoginForm
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.btnNewUser = New System.Windows.Forms.Button()
-        Me.StatusStrip1.SuspendLayout()
+        Me.lblError = New System.Windows.Forms.Label()
+        Me.btnClear = New System.Windows.Forms.Button()
         Me.SuspendLayout()
-        '
-        'StatusStrip1
-        '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.statusLabelMain})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 314)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(421, 22)
-        Me.StatusStrip1.TabIndex = 0
-        Me.StatusStrip1.Text = "StatusStrip1"
-        '
-        'statusLabelMain
-        '
-        Me.statusLabelMain.Name = "statusLabelMain"
-        Me.statusLabelMain.Size = New System.Drawing.Size(10, 17)
-        Me.statusLabelMain.Text = " "
         '
         'lblUserID
         '
@@ -97,7 +81,7 @@ Partial Class LoginForm
         '
         Me.btnLogin.AutoSize = True
         Me.btnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogin.Location = New System.Drawing.Point(162, 228)
+        Me.btnLogin.Location = New System.Drawing.Point(95, 216)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(75, 30)
         Me.btnLogin.TabIndex = 5
@@ -126,6 +110,27 @@ Partial Class LoginForm
         Me.btnNewUser.Text = "&New User"
         Me.btnNewUser.UseVisualStyleBackColor = True
         '
+        'lblError
+        '
+        Me.lblError.AutoSize = True
+        Me.lblError.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblError.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblError.Location = New System.Drawing.Point(1, 318)
+        Me.lblError.Name = "lblError"
+        Me.lblError.Size = New System.Drawing.Size(0, 13)
+        Me.lblError.TabIndex = 8
+        '
+        'btnClear
+        '
+        Me.btnClear.AutoSize = True
+        Me.btnClear.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClear.Location = New System.Drawing.Point(222, 216)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(75, 30)
+        Me.btnClear.TabIndex = 9
+        Me.btnClear.Text = "&Clear"
+        Me.btnClear.UseVisualStyleBackColor = True
+        '
         'LoginForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -134,6 +139,8 @@ Partial Class LoginForm
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(421, 336)
+        Me.Controls.Add(Me.btnClear)
+        Me.Controls.Add(Me.lblError)
         Me.Controls.Add(Me.btnNewUser)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnLogin)
@@ -141,19 +148,13 @@ Partial Class LoginForm
         Me.Controls.Add(Me.lblPassword)
         Me.Controls.Add(Me.txtUserID)
         Me.Controls.Add(Me.lblUserID)
-        Me.Controls.Add(Me.StatusStrip1)
         Me.Name = "LoginForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "BioLog Lab Data Collection"
-        Me.StatusStrip1.ResumeLayout(False)
-        Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents StatusStrip1 As StatusStrip
-    Friend WithEvents statusLabelMain As ToolStripStatusLabel
     Friend WithEvents lblUserID As Label
     Friend WithEvents txtUserID As TextBox
     Friend WithEvents lblPassword As Label
@@ -161,4 +162,6 @@ Partial Class LoginForm
     Friend WithEvents btnLogin As Button
     Friend WithEvents btnExit As Button
     Friend WithEvents btnNewUser As Button
+    Friend WithEvents lblError As Label
+    Friend WithEvents btnClear As Button
 End Class
