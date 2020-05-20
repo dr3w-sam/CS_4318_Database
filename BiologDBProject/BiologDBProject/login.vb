@@ -88,5 +88,7 @@ Public Class LoginForm
   Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
     txtPassword.Text = String.Empty
     txtUserID.Text = String.Empty
+    lblError.Text = String.Empty
+    txtUserID.Focus()
   End Sub
 End Class

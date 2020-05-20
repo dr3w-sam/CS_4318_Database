@@ -81,7 +81,7 @@ Partial Class LoginForm
         '
         Me.btnLogin.AutoSize = True
         Me.btnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogin.Location = New System.Drawing.Point(95, 216)
+        Me.btnLogin.Location = New System.Drawing.Point(129, 216)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(75, 30)
         Me.btnLogin.TabIndex = 5
@@ -92,7 +92,7 @@ Partial Class LoginForm
         '
         Me.btnExit.AutoSize = True
         Me.btnExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExit.Location = New System.Drawing.Point(222, 281)
+        Me.btnExit.Location = New System.Drawing.Point(291, 216)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(75, 30)
         Me.btnExit.TabIndex = 6
@@ -103,7 +103,7 @@ Partial Class LoginForm
         '
         Me.btnNewUser.AutoSize = True
         Me.btnNewUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNewUser.Location = New System.Drawing.Point(82, 281)
+        Me.btnNewUser.Location = New System.Drawing.Point(35, 216)
         Me.btnNewUser.Name = "btnNewUser"
         Me.btnNewUser.Size = New System.Drawing.Size(88, 30)
         Me.btnNewUser.TabIndex = 7
@@ -115,7 +115,7 @@ Partial Class LoginForm
         Me.lblError.AutoSize = True
         Me.lblError.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblError.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lblError.Location = New System.Drawing.Point(1, 318)
+        Me.lblError.Location = New System.Drawing.Point(12, 254)
         Me.lblError.Name = "lblError"
         Me.lblError.Size = New System.Drawing.Size(0, 13)
         Me.lblError.TabIndex = 8
@@ -124,7 +124,7 @@ Partial Class LoginForm
         '
         Me.btnClear.AutoSize = True
         Me.btnClear.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClear.Location = New System.Drawing.Point(222, 216)
+        Me.btnClear.Location = New System.Drawing.Point(210, 216)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(75, 30)
         Me.btnClear.TabIndex = 9
@@ -138,7 +138,7 @@ Partial Class LoginForm
         Me.BackColor = System.Drawing.SystemColors.ButtonShadow
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(421, 336)
+        Me.ClientSize = New System.Drawing.Size(421, 280)
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.lblError)
         Me.Controls.Add(Me.btnNewUser)
