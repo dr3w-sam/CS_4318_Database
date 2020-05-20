@@ -36,6 +36,8 @@ Public Class profAction
     'TODO: This line of code loads data into the 'BiologDataSet.student' table. You can move, or remove it, as needed.
     Me.StudentTableAdapter.Fill(Me.BiologDataSet.student)
 
+    popCbb()
+
   End Sub
 
   Private Sub btnUniv_Click(sender As Object, e As EventArgs) Handles btnUniv.Click
@@ -43,4 +45,60 @@ Public Class profAction
     dgvData.Visible = False
     ' dgvUniversity.Visible = True
   End Sub
+
+  Private Sub btnNewProfessor_Click(sender As Object, e As EventArgs) Handles btnNewProfessor.Click
+    dgvData.Visible = False
+    dgvStudentView.Visible = False
+    newProfessor.Visible = True
+  End Sub
+  'this button click will collect the input data from the text fields and insert them in the database
+
+  Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
+    Using mysqlConn As New MySqlConnection("server=localhost;userid=root;password=Quantum_2020;database=biolog")
+      Using query As New MySqlCommand("insert into `professor`(`professorID`,`classID`,`firstName`,`lastName`,`officeNo`,`phoneNo`,`email`,`profPassword`) values 
+@profID, @class, @fName, @lName, @office, @phone, @email, @profPass")
+
+
+      End Using
+    End Using
+  End Sub
+  Private Sub popCbb()
+
+    Dim dr As MySqlDataReader 'needed to read the data from the database into a local variable
+
+    Try
+      Using mysqlConn As New MySqlConnection("server=localhost;userid=root;password=Quantum_2020;database=biolog")
+        Using query As New MySqlCommand("select classID, className from class", mysqlConn) 'selects only the classID and the className from the db
+          mysqlConn.Open()        'open db connection
+          dr = query.ExecuteReader
+
+          While dr.Read = True  'will loop until no more tuples are found in the db
+            Dim clId As String
+            Dim name As String
+            Dim both As String  'variable to hold string concat
+            clId = CType(dr("classID"), String)
+            name = CType(dr("className"), String)
+            both = clId + " " + name
+            cbbClass.Items.Add(both)  'adds as concatenated string to the combobox for user selection
+          End While
+
+        End Using
+
+      End Using
+    Catch ex As Exception
+      MessageBox.Show(ex.Message)
+
+    End Try
+  End Sub
+
+  'this function will return the classID number to pass to the database in order to assign the student to the correct class
+  Private Function getClassID() As String
+    Dim id As String
+    Dim actual As String
+    id = CType(cbbClass.SelectedItem(), String)
+    actual = id.Substring(0, 4)
+
+    Return actual
+  End Function
+
 End Class
