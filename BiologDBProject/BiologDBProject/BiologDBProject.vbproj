@@ -101,7 +101,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>biologDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="SqlStatements.vb" />
     <Compile Include="newUser.Designer.vb">
       <DependentUpon>newUser.vb</DependentUpon>
     </Compile>
